@@ -10,21 +10,19 @@
 	<form action="login.php" method="post">
     <div class="login-container">
         <h1>Login</h1>
-        <?php if (isset(_$GET['error'])) { ?>
-            <p class="error"><?php echo _$GET['error'] ?></p>
-
+        <?php if (isset($_GET['error'])) { ?>
+            <p class="error"><?php echo $_GET['error']; ?></p>
         <?php } ?>
-        <form>
-            <div class="input-container">
-                <label for="username">Username:</label>
-                <input type="text" name="uname" placeholder="User Name">
-            </div>
-            <div class="input-container">
-                <label for="password">Password:</label>
-                <input type="password" name="password" placeholder="Password">
-            </div>
-            <button type="submit">Login</button>
-        </form>
+        <div class="input-container">
+            <label for="username">Username:</label>
+            <input type="text" name="uname" placeholder="User Name">
+        </div>
+        <div class="input-container">
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Password">
+        </div>
+        <button type="submit">Login</button>
     </div>
+	</form>
 </body>
 </html>
