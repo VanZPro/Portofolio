@@ -7,16 +7,21 @@
     <title>Login Page</title>
 </head>
 <body>
+	<form action="login.php" method="post">
     <div class="login-container">
         <h1>Login</h1>
+        <?php if (isset(_$GET['error'])) { ?>
+            <p class="error"><?php echo _$GET['error'] ?></p>
+
+        <?php } ?>
         <form>
             <div class="input-container">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" name="uname" placeholder="User Name">
             </div>
             <div class="input-container">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" name="password" placeholder="Password">
             </div>
             <button type="submit">Login</button>
         </form>
